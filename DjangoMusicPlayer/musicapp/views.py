@@ -8,7 +8,7 @@ from . models import Song
 
 def index(request):
     paginator=Paginator(Song.objects.all(),1)
-    page_number=request.Get.get('page')
+    page_number=request.POST.get('page')
     page_obj=paginator.get_page(page_number)
     context={"page_obj":page_obj}
 

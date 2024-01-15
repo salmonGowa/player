@@ -6,7 +6,7 @@ from . import views
 
 app_name="APP"
 urlpatterns = [
-    path("",views.index,name="index"),
+    path("index",views.index,name="index"),
 ]
 
 
