@@ -5,4 +5,8 @@ from . import views
 
 
 app_name="APP"
-path("",views.index,name="index"),
+urlpatterns = [
+    path("",views.index,name="index"),
+]
+
+
