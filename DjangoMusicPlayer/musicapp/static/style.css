@@ -1,9 +1,4 @@
-$red: #EB2045;
-$grey: #0B0B0B;
-$p: 12px;
-$easeInBack: cubic-bezier(0.600, -0.280, 0.735, 0.045);
-$easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
-$easeOutCubic: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+
 
 *, *:before, *:after { box-sizing: border-box; }
 * { -webkit-tap-highlight-color: rgba(0,0,0,0); transform-style: preserve-3d; }
@@ -17,11 +12,11 @@ hr {
 	padding: 0;
 	width: 100%;
 	height: 1px;
-	background: rgba($grey, .5);
+	background: rgba(grey, .5);
 }
 
 body {
-	color: $grey;
+	color: grey;
 	font-family: "Roboto Mono", monospace;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
@@ -36,7 +31,7 @@ main {
 	position: relative;
 	width: 100%;
 	height: 100%;
-	padding: $p;
+	padding: 2px;
 }
 
 .background {
@@ -54,7 +49,7 @@ main {
 		filter: blur(2px);
 	}
 	div {
-		background: $red;
+		background:red;
 		mix-blend-mode: screen;
 	}
 	&:after {
@@ -89,10 +84,10 @@ main {
 	backface-visibility: hidden;
 }
 .front, .back {
-	transition: all 500ms $easeOutBack;
+	transition: all 500ms easeOutBack;
 	background: white;
 	border-radius: 2px;
-	box-shadow: 0 0 15px rgba(mix($red, $grey), .2);
+	box-shadow: 0 0 15px rgba(mix(red, grey), .2);
 }
 .back {
 	position: absolute;
@@ -104,25 +99,25 @@ main {
 		display: flex;
 		align-items: center;
 		align-content: center;
-		background: rgba($grey, .1);
-		padding: $p;
+		background: rgba(grey, .1);
+		padding: p;
 		a {
 			display: block;
 			padding: 0 5px 3px!important;
 			border-radius: 2px;
-			margin-right: $p;
-			background: rgba($grey, .1);
+			margin-right: p;
+			background: rgba(grey, .1);
 		}
 	}
 	a {
 		display: flex;
-		padding: $p;
+		padding: p;
 		&:hover, &:focus {
-			background: $red;
+			background-color: red;
 			color: white;
 		}
 		&:active {
-			background: $grey;
+			background: grey;
 		}
 	}
 	img {
@@ -131,16 +126,16 @@ main {
 		height: 32px;
 		width: 32px;
 		+ div {
-			padding-left: $p;
+			padding-left: 5px;
 		}
 	}
 	hr {
-		margin-left: $p;
-		width: calc(100% - #{$p*2});
-		background: rgba($grey, .1);
+		margin-left: 5p;
+		width: 10px;
+		background-color: rgba(grey, .1);
 	}
 	h3 {
-		margin-bottom: 4px;
+		margin-bottom: 4%;
 		font-size: 16px;
 		font-weight: 300;
 	}
@@ -158,8 +153,8 @@ main {
 	position: relative;
 	z-index: 2;
 	width: 100%;
-	height: $p;
-	margin-top: -$p/2;
+	height: 10px;
+	margin-top: -p/2;
 	overflow: hidden;
 	&:before, hr {
 		display: block;
@@ -179,24 +174,24 @@ main {
 		margin-bottom: 0;
 		padding: 0;
 		border: 0;
-		background: $red;
+		background: red;
 		&:after {
 			transform-origin: center center;
 			content: "";
 			display: block;
 			position: absolute;
-			right: -$p/2;
+			right: -p/2;
 			top: 50%;
-			margin-top: -$p/2;
-			width: $p;
-			height: $p;
-			background: $red;
+			margin-top: -p/2;
+			width: p;
+			height: p;
+			background: red;
 			border-radius: 2px;
 		}
 		&:hover {
-			background: $grey;
+			background: grey;
 			&:after {
-				background: $grey;
+				background-color: grey;
 			}
 		}
 	}
@@ -224,18 +219,18 @@ main {
 	}
 	&.top {
 		justify-content: space-around;
-		padding: $p;
+		padding: p;
 		a {
 			transition: all 250ms ease-out;
 			will-change: transform;
 			svg {
-				fill: $grey;
+				fill: grey;
 			}
 			&:hover, &:focus {
-				transition: all 500ms $easeOutBack;
+				transition: all 500ms easeOutBack;
 				transform: scale(1.1);
 				svg {
-					fill: $red;
+					fill: red;
 				}
 			}
 			&:active {
@@ -245,25 +240,25 @@ main {
 	}
 	&.bottom {
 		justify-content: space-between;
-		padding: $p*1.5 $p $p;
+		padding: p*1.5 p p;
 		a {
 			width: 24px;
 			height: 20px;
 			svg {
-				fill: rgba($red, .25);
+				fill: rgba(red, .25);
 			}
 			&:hover, &:focus, &.active {
 				svg {
-					fill: $red;
+					fill: red;
 				}
 			}
 			&.flip {
 				svg {
-					fill: rgba($grey, .25);
+					fill: rgba(grey, .25);
 				}
 				&:hover, &:focus {
 					svg {
-						fill: $grey;
+						fill: grey;
 					}
 				}
 			}
@@ -276,16 +271,16 @@ main {
 		display: flex;
 		justify-content: space-between;
 		width: 100%;
-		padding: 0 $p/3;
+		padding: 0 p/3;
 		font-size: 10px;
 	}
 	.info {
-		padding: $p;
+		padding: p;
 	}
 	h1 {
 		font-size: 20px;
 		font-weight: 300;
-		margin-bottom: $p/2;
+		margin-bottom: p/2;
 	}
 	h2 {
 		font-size: 14px;
@@ -310,7 +305,7 @@ main {
 		opacity: 1;
 	}
 	.player {
-		animation: rotateIn 1000ms $easeOutCubic 500ms forwards;
+		animation: rotateIn 1000ms easeOutCubic 500ms forwards;
 	}
 }
 
@@ -340,14 +335,14 @@ main {
 		.player {
 			transition: all 500ms ease-out;
 			&:hover {
-				transition: all 1000ms $easeOutBack;
+				transition: all 1000ms easeOutBack;
 			}
 		}
 	}
 	.player {
 		will-change: transform;
 		&:hover {
-			transform: translateZ(#{$p*5});
+			transform: translate(0.5s);
 		}
 		.back {
 			transform: rotateY(180deg);
